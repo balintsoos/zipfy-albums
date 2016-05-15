@@ -1,2 +1,2 @@
-# zipf-album-stat
-Album statistics with Zipf's Law
+# Zipfy albums
+> Sorting music albums with Zipf's Law

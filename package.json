@@ -1,0 +1,42 @@
+{
+  "name": "zipfy-albums",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Sorting music albums with Zipf's Law",
+  "homepage": "https://github.com/balintsoos/zipfy-albums#readme",
+  "license": "MIT",
+  "keywords": [
+    "zipf",
+    "zipfy",
+    "zipf's law"
+  ],
+  "author": {
+    "name": "Balint Soos",
+    "email": "soosbalint95@gmail.com",
+    "url": "http://balintsoos.com/"
+  },
+  "contributors": [
+    {
+      "name": "Balint Soos",
+      "email": "soosbalint95@gmail.com",
+      "url": "http://balintsoos.com/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://balintsoos@github.com/balintsoos/zipfy-albums.git"
+  },
+  "bugs": {
+    "url": "https://github.com/balintsoos/zipfy-albums/issues"
+  },
+  "engines": {
+    "node": ">=6.1.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app",
+    "lint": "eslint .",
+    "unit": "mocha ./src/**/*.spec.js",
+    "test": "npm run lint --silent; npm run unit --silent"
+  },
+}

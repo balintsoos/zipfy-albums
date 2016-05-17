@@ -1,4 +1,7 @@
 # Zipfy albums
+
+[ ![Codeship Status for balintsoos/zipfy-albums](https://codeship.com/projects/348eba10-feae-0133-c79c-364f31082d61/status?branch=master)](https://codeship.com/projects/152596)
+
 > Sorting music albums with Zipf's Law
 
 ## What is Zipf's Law?

@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 const genZipfDist = require('.')
 
-describe('Zipf Distribution Generator', () => {
+describe('generateZipfDistribution', () => {
   it('should return the base / index ratio', () => {
     expect(genZipfDist(5, 2)).to.equal(2.5)
     expect(genZipfDist(1, 4)).to.equal(0.25)

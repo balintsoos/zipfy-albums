@@ -1,12 +1,12 @@
 const expect = require('chai').expect
-const genZipfyFreq = require('.')
+const extWithZipfyFreq = require('.')
 
-describe('Zipfy Frequency Generator', () => {
-  it("should extend the song object with the expected frequency based on Zipf's Law", () => {
+describe('extendWithZipfyFrequency', () => {
+  it("should extend the song object with the expected frequency according to Zipf's Law", () => {
     const mockSong = { title: 'mock', frequency: 5 }
     const mockArray = [{ frequency: 5 }]
 
-    expect(genZipfyFreq(mockSong, 1, mockArray)).to.deep.equal({
+    expect(extWithZipfyFreq(mockSong, 1, mockArray)).to.deep.equal({
       title: 'mock',
       frequency: 5,
       zipfyFrequency: 2.5
@@ -30,6 +30,6 @@ describe('Zipfy Frequency Generator', () => {
       }
     ]
 
-    expect(mockArray.map(genZipfyFreq)).to.deep.equal(expectedArray)
+    expect(mockArray.map(extWithZipfyFreq)).to.deep.equal(expectedArray)
   })
 })

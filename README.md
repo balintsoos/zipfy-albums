@@ -3,6 +3,8 @@ Sorting music albums with the help of Zipf's Law
 
 [ ![Codeship Status for balintsoos/zipfy-albums](https://codeship.com/projects/348eba10-feae-0133-c79c-364f31082d61/status?branch=master)](https://codeship.com/projects/152596)
 [![Coverage Status](https://coveralls.io/repos/github/balintsoos/zipfy-albums/badge.svg?branch=master)](https://coveralls.io/github/balintsoos/zipfy-albums?branch=master)
+[![Dependency Status](https://david-dm.org/balintsoos/zipfy-albums.svg)](https://david-dm.org/balintsoos/zipfy-albums)
+[![devDependency Status](https://david-dm.org/balintsoos/zipfy-albums/dev-status.svg)](https://david-dm.org/balintsoos/zipfy-albums#info=devDependencies&view=table)
 
 ## What is Zipf's Law?
 > "The Zipf Mystery" by [Vsauce](https://www.youtube.com/user/Vsauce)

@@ -5,6 +5,7 @@ const nconf = require('nconf')
 const compression = require('compression')
 const helmet = require('helmet')
 const chalk = require('chalk')
+const albumsController = require('./controllers/albums')
 
 nconf.argv().env()
 nconf.defaults({
@@ -20,6 +21,8 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use('/albums', albumsController)
+
 app.listen(nconf.get('PORT'), () => {
   console.log(
     chalk.green('Server listening'),
@@ -27,3 +30,5 @@ app.listen(nconf.get('PORT'), () => {
     chalk.underline.magenta(`http://${nconf.get('HOST')}:${nconf.get('PORT')}`)
   )
 })
+
+module.exports = app

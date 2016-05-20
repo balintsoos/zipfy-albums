@@ -40,7 +40,7 @@
     "pretest": "npm run lint",
     "test": "npm run unit",
     "nyan": "mocha -R nyan ./**/*.spec.js",
-    "coverage": "istanbul cover _mocha --report lcovonly -- -R nyan ./**/*.spec.js",
+    "coverage": "istanbul cover _mocha -- -R nyan ./**/*.spec.js",
     "precoveralls": "npm run coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "postcoveralls": "rm -rf ./coverage"

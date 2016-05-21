@@ -60,7 +60,11 @@ describe('Store', () => {
         store.readOneById(2, callback)
         store.readOneById(0, callback)
         store.readOneById(-1, callback)
-        expect(callback.callCount).to.equal(3)
+        store.readOneById(undefined, callback)
+        store.readOneById(null, callback)
+        store.readOneById({}, callback)
+        store.readOneById('test', callback)
+        expect(callback.callCount).to.equal(7)
         expect(callback.alwaysCalledWithExactly({ err: 'invalid id' })).to.be.true
       })
     })

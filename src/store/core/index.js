@@ -15,7 +15,7 @@ module.exports = (dependencies = {}) => {
       return callback(null, this.albums)
     }
 
-    readOneById(id = 0, callback) {
+    readOneById(id, callback) {
       if (!Number.isInteger(id) || id < 0 || id >= this.albums.length) {
         return callback({ err: 'invalid id' })
       }

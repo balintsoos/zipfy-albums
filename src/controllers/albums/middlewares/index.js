@@ -1,6 +1,6 @@
 const core = require('./core')
 const store = require('../../../store').create()
-const BestSongsFinder = require('../../../lib/BestSongsFinder')
+const BestSongsFinder = require('../../../lib/bestSongsFinder')
 
 const dependencies = { store, BestSongsFinder }
 

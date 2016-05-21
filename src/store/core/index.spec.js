@@ -24,7 +24,7 @@ describe('Store', () => {
   describe('core', () => {
     describe('without isAlbum dependency', () => {
       it('should throw an error', () => {
-        expect(core.bind({})).to.throw('isAlbum dependency is missing')
+        expect(core.bind(core, {})).to.throw('isAlbum dependency is missing')
       })
     })
 

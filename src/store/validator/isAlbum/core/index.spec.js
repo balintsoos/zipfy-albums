@@ -23,7 +23,7 @@ describe('validator - isAlbum', () => {
 
   describe('without isSong dependency', () => {
     it('should throw an error', () => {
-      expect(core.bind({})).to.throw('isSong dependency is missing')
+      expect(core.bind(core, {})).to.throw('isSong dependency is missing')
     })
   })
 

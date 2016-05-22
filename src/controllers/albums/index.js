@@ -1,13 +1,13 @@
 /* eslint-disable new-cap */
 const router = require('express').Router()
-/* eslint-enable new-cap */
+const mw = require('./middlewares')
 
-router.get('/', (req, res) => {
-  res.send('get albums')
-})
+router.get('/', mw.getAllAlbums)
 
-router.post('/', (req, res) => {
-  res.send('post albums')
-})
+router.get('/:id', mw.parseId, mw.getOneAlbum)
+
+router.get('/:id/best', mw.parseId, mw.getBestSongs)
+
+router.post('/', mw.postOneAlbum)
 
 module.exports = router

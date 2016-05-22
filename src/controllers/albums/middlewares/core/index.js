@@ -12,21 +12,13 @@ module.exports = (dependencies = {}) => {
 
   return {
     parseId(req, res, next) {
-      if (req.params.id) {
-        req.params.id = parseInt(req.params.id, 10)
-      }
+      req.params.id = parseInt(req.params.id, 10)
 
       next()
     },
 
     getAllAlbums(req, res) {
-      store.read((err, result) => {
-        if (err) {
-          return res.status(500).json(err)
-        }
-
-        return res.json(result)
-      })
+      store.read((err, result) => res.json(result))
     },
 
     getOneAlbum(req, res) {
@@ -60,7 +52,7 @@ module.exports = (dependencies = {}) => {
           return res.status(400).json(err)
         }
 
-        return res.json(result)
+        return res.status(201).json(result)
       })
     }
   }

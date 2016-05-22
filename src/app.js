@@ -6,6 +6,8 @@ const nconf = require('nconf')
 const compression = require('compression')
 const helmet = require('helmet')
 const chalk = require('chalk')
+
+const homeController = require('./controllers/home')
 const albumsController = require('./controllers/albums')
 
 nconf.argv().env()
@@ -22,6 +24,7 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use('/', homeController)
 app.use('/albums', albumsController)
 
 app.listen(nconf.get('PORT'), () => {

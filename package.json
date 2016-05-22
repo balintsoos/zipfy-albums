@@ -1,6 +1,6 @@
 {
   "name": "zipfy-albums",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "Sorting music albums with Zipf's Law",
   "homepage": "https://github.com/balintsoos/zipfy-albums#readme",

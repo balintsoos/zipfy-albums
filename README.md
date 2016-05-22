@@ -5,6 +5,7 @@ Sorting music albums with the help of Zipf's Law
 [![Coverage Status](https://coveralls.io/repos/github/balintsoos/zipfy-albums/badge.svg?branch=master)](https://coveralls.io/github/balintsoos/zipfy-albums?branch=master)
 [![Dependency Status](https://david-dm.org/balintsoos/zipfy-albums.svg)](https://david-dm.org/balintsoos/zipfy-albums)
 [![devDependency Status](https://david-dm.org/balintsoos/zipfy-albums/dev-status.svg)](https://david-dm.org/balintsoos/zipfy-albums#info=devDependencies&view=table)
+[![Heroku Status](https://img.shields.io/badge/heroku-deployed-684d88.svg)](https://zipfy-albums.herokuapp.com/)
 
 ## What is Zipf's Law?
 > "The Zipf Mystery" by [Vsauce](https://www.youtube.com/user/Vsauce)

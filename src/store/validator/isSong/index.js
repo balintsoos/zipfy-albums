@@ -1,11 +1,11 @@
 function isSong(song = {}) {
   const hasFrequency = song.hasOwnProperty('frequency')
-  const isInteger = Number.isInteger(song.frequency)
+  const isValidFrequency = Number.isInteger(song.frequency)
 
   const hasTitle = song.hasOwnProperty('title')
-  const isString = (typeof song.title === 'string')
+  const isValidTitle = (typeof song.title === 'string')
 
-  return hasFrequency && isInteger && hasTitle && isString
+  return hasFrequency && isValidFrequency && hasTitle && isValidTitle
 }
 
 module.exports = isSong

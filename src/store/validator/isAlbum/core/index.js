@@ -3,7 +3,7 @@ module.exports = (dependencies = {}) => {
     throw new Error('isSong dependency is missing')
   }
 
-  const isSong = dependencies.isSong
+  const { isSong } = dependencies
 
   return function isAlbum(album) {
     if (!Array.isArray(album)) {

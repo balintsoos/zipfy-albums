@@ -44,7 +44,7 @@ describe('Albums Controller', () => {
     })
 
     describe('with valid id', () => {
-      it('should get an empty array if there is no albums saved in the store', (done) => {
+      it('should get the required object from the store', (done) => {
         request(app)
           .get('/0')
           .set('Accept', 'application/json')
@@ -66,12 +66,30 @@ describe('Albums Controller', () => {
     })
 
     describe('with valid id', () => {
-      it('should get an empty array if there is no albums saved in the store', (done) => {
+      it('should get all the songs in zipfy frequency order from the required album', (done) => {
         request(app)
           .get('/0/best')
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(200, [{ title: 'song1' }], done)
+      })
+    })
+
+    describe('with top query string', () => {
+      it('should get the top n songs in zipfy frequency order from the required album', (done) => {
+        request(app)
+          .get('/0/best?top=1')
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(200, [{ title: 'song1' }], done)
+      })
+
+      it('should get an empty array if top is 0', (done) => {
+        request(app)
+          .get('/0/best?top=0')
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(200, [], done)
       })
     })
   })

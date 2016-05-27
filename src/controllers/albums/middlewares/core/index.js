@@ -34,7 +34,7 @@ module.exports = (dependencies = {}) => {
     getBestSongs(req, res) {
       const numberOfSongs = req.query.top
         ? parseInt(req.query.top, 10)
-        : 1
+        : undefined
 
       store.readOneById(req.params.id, (err, result) => {
         if (err) {

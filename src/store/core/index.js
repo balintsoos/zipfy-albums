@@ -3,7 +3,7 @@ module.exports = (dependencies = {}) => {
     throw new Error('isAlbum dependency is missing')
   }
 
-  const isAlbum = dependencies.isAlbum
+  const { isAlbum } = dependencies
 
   return class Store {
 
